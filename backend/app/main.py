@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZIPMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
@@ -7,6 +7,9 @@ from fastapi.exceptions import RequestValidationError
 from contextlib import asynccontextmanager
 import logging
 import traceback
+from slowapi import Limiter
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 from app.core.config import settings
 from app.core.database import Base, engine
@@ -16,6 +19,9 @@ from app.routers import detect, logs, models, health
 
 # Global variable to track model loading
 model_loaded = False
+
+# Initialize rate limiter
+limiter = Limiter(key_func=get_remote_address)
 
 
 # Initialize YOLOv8 model at startup
@@ -64,9 +70,23 @@ try:
         redoc_url="/api/redoc" if settings.DEBUG else None,
         openapi_url="/api/openapi.json" if settings.DEBUG else None,
     )
+    
+    # Attach rate limiter to app
+    app.state.limiter = limiter
 except Exception as e:
     logger.error(f"Failed to create FastAPI app: {str(e)}")
     raise
+
+
+# Rate Limit Exception Handler
+@app.exception_handler(RateLimitExceeded)
+async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
+    """Handle rate limit exceeded errors."""
+    logger.warning(f"⚠️  Rate limit exceeded for {get_remote_address(request)}")
+    return JSONResponse(
+        status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+        content={"detail": "Rate limit exceeded. Please try again later."},
+    )
 
 # Add security middleware BEFORE other middleware
 # Trusted Host Middleware - prevent Host header attacks
