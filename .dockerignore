@@ -1,0 +1,82 @@
+# Git and version control
+.git
+.gitignore
+.gitattributes
+.github
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info
+dist/
+build/
+*.egg
+
+# IDE and Editor
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.pytest_cache
+.coverage
+htmlcov
+.tox
+
+# Logs
+logs/
+*.log
+
+# Environment files - CRITICAL: Don't copy .env files
+.env
+.env.local
+.env.*.local
+.env.production
+
+# OS specific
+Thumbs.db
+.DS_Store
+
+# Node modules (frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+dist/
+build/
+*.whl
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Test data
+tests/
+test_*.py
+*_test.py
+
+# Notebooks
+*.ipynb
+.ipynb_checkpoints
