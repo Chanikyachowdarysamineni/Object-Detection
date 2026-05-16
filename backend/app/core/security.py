@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 from typing import Optional
 import jwt
 from passlib.context import CryptContext
-from app.core.config import settings
+from .config import settings
 import logging
 import secrets
 import hashlib

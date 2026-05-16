@@ -3,10 +3,10 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List
 
-from app.core.database import get_db
-from app.core.logging import logger
-from app.schemas.schemas import ModelResponse, ModelCreate
-from app.models.models import Model, Detection
+from ..core.database import get_db
+from ..core.logging import logger
+from ..schemas.schemas import ModelResponse, ModelCreate
+from ..models.models import Model, Detection
 
 router = APIRouter(prefix="/api/models", tags=["models"])
 

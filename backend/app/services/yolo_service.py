@@ -3,8 +3,8 @@ import numpy as np
 from typing import List, Tuple, Optional
 import torch
 from ultralytics import YOLO
-from app.core.config import settings
-from app.core.logging import logger
+from ..core.config import settings
+from ..core.logging import logger
 from pathlib import Path
 import time
 
@@ -57,28 +57,43 @@ class YOLOv8Service:
     def load_model(self) -> None:
         """Load YOLOv8 model from file."""
         try:
-            logger.info(f"Loading YOLOv8 model from {settings.MODEL_PATH}")
+            logger.info("Loading YOLOv8 model from " + settings.MODEL_PATH)
             
             # Get device
             device = self._get_device()
             
-            # Load model with automatic downloading if needed
-            self._model = YOLO(settings.MODEL_PATH, task="detect")
+            # PyTorch 2.6+ compatibility: Patch torch.load to disable weights_only
+            # This is needed because ultralytics internally calls torch.load without weights_only=False
+            original_load = torch.load
+            def patched_torch_load(*args, **kwargs):
+                # Set weights_only=False if not explicitly set
+                if 'weights_only' not in kwargs:
+                    kwargs['weights_only'] = False
+                return original_load(*args, **kwargs)
+            
+            torch.load = patched_torch_load
+            
+            try:
+                # Load model with automatic downloading if needed
+                self._model = YOLO(settings.MODEL_PATH, task="detect")
+            finally:
+                # Restore original torch.load
+                torch.load = original_load
             
             # Move to device
             try:
                 self._model.to(device)
             except Exception as e:
-                logger.warning(f"Could not move model to device {device}: {str(e)}")
+                logger.warning("Could not move model to device " + str(device) + ": " + str(e))
             
             # Verify model is loaded
             if self._model is None or self._model.model is None:
                 raise ValueError("Model failed to load properly")
             
-            logger.info(f"✅ YOLOv8 model loaded successfully on {device}")
+            logger.info("YOLOv8 model loaded successfully on device: " + str(device))
             
         except Exception as e:
-            logger.error(f"❌ Failed to load YOLOv8 model: {str(e)}")
+            logger.error("Failed to load YOLOv8 model: " + str(e))
             raise
 
     def detect_objects(

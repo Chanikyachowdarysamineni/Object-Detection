@@ -5,16 +5,16 @@ from PIL import Image
 import cv2
 import numpy as np
 
-from app.core.database import get_db
-from app.core.logging import logger
-from app.schemas.schemas import (
+from ..core.database import get_db
+from ..core.logging import logger
+from ..schemas.schemas import (
     DetectionResponse,
     ImageDetectionRequest,
     VideoDetectionRequest,
 )
-from app.models.models import Detection, DetectedObject, Model
-from app.services.yolo_service import YOLOv8Service
-from app.core.config import settings
+from ..models.models import Detection, DetectedObject, Model
+from ..services.yolo_service import YOLOv8Service
+from ..core.config import settings
 
 router = APIRouter(prefix="/api/detect", tags=["detection"])
 yolo_service = YOLOv8Service()
@@ -133,14 +133,14 @@ async def detect_image(
         db.commit()
         db.refresh(db_detection)
         
-        logger.info(f"✅ Image detection: {file.filename}, {len(detections)} objects in {processing_ms}ms")
+        logger.info(f"[OK] Image detection: {file.filename}, {len(detections)} objects in {processing_ms}ms")
         return db_detection
         
     except HTTPException:
         raise
     except Exception as e:
         db.rollback()
-        logger.error(f"❌ Image detection error: {str(e)}")
+        logger.error(f"[ERROR] Image detection error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Detection failed: {str(e)}")
 
 
@@ -255,7 +255,7 @@ async def detect_video(
         
         db.commit()
         
-        logger.info(f"✅ Video detection: {file.filename}, {len(all_detections)} objects in {total_time}ms")
+        logger.info(f"[OK] Video detection: {file.filename}, {len(all_detections)} objects in {total_time}ms")
         
         return {
             "detection_id": db_detection.detection_id,
@@ -269,7 +269,7 @@ async def detect_video(
     except Exception as e:
         if db:
             db.rollback()
-        logger.error(f"❌ Video detection error: {str(e)}")
+        logger.error(f"[ERROR] Video detection error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Video detection failed: {str(e)}")
     finally:
         # Clean up temporary file

@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.gzip import GZIPMiddleware
+from starlette.middleware.gzip import GZipMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
@@ -11,11 +11,11 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 
-from app.core.config import settings
-from app.core.database import Base, engine
-from app.core.logging import logger
-from app.services.yolo_service import YOLOv8Service
-from app.routers import detect, logs, models, health
+from .core.config import settings
+from .core.database import Base, engine
+from .core.logging import logger
+from .services.yolo_service import YOLOv8Service
+from .routers import detect, logs, models, health
 
 # Global variable to track model loading
 model_loaded = False
@@ -31,32 +31,32 @@ async def lifespan(app: FastAPI):
     global model_loaded
     
     # Startup
-    logger.info("🚀 Starting application...")
+    logger.info("[STARTUP] Starting application...")
     
     # Create database tables
     try:
-        logger.info("📦 Creating database tables...")
+        logger.info("[DB] Creating database tables...")
         Base.metadata.create_all(bind=engine)
-        logger.info("✅ Database tables initialized")
+        logger.info("[OK] Database tables initialized")
     except Exception as e:
-        logger.error(f"❌ Database initialization failed: {str(e)}")
+        logger.error(f"[ERROR] Database initialization failed: {str(e)}")
     
     # Load YOLOv8 model
     try:
-        logger.info("🤖 Loading YOLOv8 model...")
+        logger.info("[MODEL] Loading YOLOv8 model...")
         yolo_service = YOLOv8Service()
         model_info = yolo_service.get_model_info()
-        logger.info(f"✅ YOLOv8 model loaded successfully: {model_info}")
+        logger.info(f"[OK] YOLOv8 model loaded successfully: {model_info}")
         model_loaded = True
     except Exception as e:
-        logger.error(f"❌ Failed to load YOLOv8 model: {str(e)}")
+        logger.error(f"[ERROR] Failed to load YOLOv8 model: {str(e)}")
         logger.error(f"Traceback: {traceback.format_exc()}")
         model_loaded = False
     
     yield
     
     # Shutdown
-    logger.info("⏹️  Shutting down application...")
+    logger.info("[SHUTDOWN] Shutting down application...")
 
 
 # Create FastAPI app with proper error handling
@@ -82,7 +82,7 @@ except Exception as e:
 @app.exception_handler(RateLimitExceeded)
 async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
     """Handle rate limit exceeded errors."""
-    logger.warning(f"⚠️  Rate limit exceeded for {get_remote_address(request)}")
+    logger.warning(f"[WARNING] Rate limit exceeded for {get_remote_address(request)}")
     return JSONResponse(
         status_code=status.HTTP_429_TOO_MANY_REQUESTS,
         content={"detail": "Rate limit exceeded. Please try again later."},
@@ -97,7 +97,7 @@ app.add_middleware(
 )
 
 # GZIP Compression Middleware
-app.add_middleware(GZIPMiddleware, minimum_size=1000)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 # CORS Middleware - with secure configuration
 app.add_middleware(
@@ -108,7 +108,7 @@ app.add_middleware(
     allow_headers=settings.ALLOW_HEADERS,
     max_age=600,  # 10 minutes - cache preflight requests
 )
-logger.info(f"✅ CORS configured for origins: {settings.ALLOWED_ORIGINS}")
+logger.info(f"[OK] CORS configured for origins: {settings.ALLOWED_ORIGINS}")
 
 
 # Security Headers Middleware
@@ -191,7 +191,7 @@ try:
     app.include_router(detect.router)
     app.include_router(logs.router)
     app.include_router(models.router)
-    logger.info("✅ All routers registered")
+    logger.info("[OK] All routers registered")
 except Exception as e:
     logger.error(f"Failed to register routers: {str(e)}")
     raise

@@ -3,10 +3,17 @@ import json
 import secrets
 from typing import List, Union
 from pydantic_settings import BaseSettings
+from pydantic import ConfigDict
 
 
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
+
+    model_config = ConfigDict(
+        env_file=".env",
+        case_sensitive=True,
+        extra="ignore"  # Ignore extra environment variables
+    )
 
     # Environment
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
@@ -60,7 +67,11 @@ class Settings(BaseSettings):
         os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
         if os.getenv("ALLOWED_ORIGINS")
         else (
-            ["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173"]
+            [
+                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:5176",
+                "http://localhost:3000", "http://127.0.0.1:5173", "http://127.0.0.1:5174",
+                "http://127.0.0.1:5175", "http://127.0.0.1:5176"
+            ]
             if DEBUG
             else []
         )
@@ -94,35 +105,6 @@ class Settings(BaseSettings):
     SECURE_HSTS_SECONDS: int = 31536000  # 1 year
     SECURE_HSTS_INCLUDE_SUBDOMAINS: bool = True
     SECURE_HSTS_PRELOAD: bool = True
-
-    class Config:
-        env_file = ".env"
-        case_sensitive = True
-    
-    @classmethod
-    def settings_customise_sources(cls, settings_cls, init_settings, env_settings, dotenv_settings, file_settings):
-        """Customize settings sources to handle ALLOWED_ORIGINS from env."""
-        # Handle ALLOWED_ORIGINS parsing
-        if 'ALLOWED_ORIGINS' in env_settings:
-            try:
-                origins_str = env_settings['ALLOWED_ORIGINS']
-                # Try to parse as JSON
-                if origins_str.startswith('['):
-                    env_settings['ALLOWED_ORIGINS'] = json.loads(origins_str)
-                else:
-                    # Parse as comma-separated values
-                    env_settings['ALLOWED_ORIGINS'] = [
-                        o.strip() for o in origins_str.split(',') if o.strip()
-                    ]
-            except (json.JSONDecodeError, ValueError):
-                pass  # Use default
-        
-        return (
-            init_settings,
-            env_settings,
-            dotenv_settings,
-            file_settings,
-        )
 
 
 # Create settings instance with error handling

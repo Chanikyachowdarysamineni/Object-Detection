@@ -18,19 +18,24 @@ else:
 
 try:
     # Create SQLAlchemy engine with production-ready settings
-    engine = create_engine(
-        settings.DATABASE_URL,
-        echo=settings.DATABASE_ECHO,
-        pool_class=pool_class,
-        pool_pre_ping=True,  # Verify connections before using
-        pool_recycle=3600,   # Recycle connections every hour
-        pool_size=10,        # Connection pool size
-        max_overflow=20,     # Max overflow connections
-        connect_args={"connect_timeout": 10} if "postgresql" in settings.DATABASE_URL else {},
-    )
-    logger.info(f"✅ Database engine created: {settings.DATABASE_URL[:50]}...")
+    if "sqlite" in settings.DATABASE_URL:
+        engine = create_engine(
+            settings.DATABASE_URL,
+            echo=settings.DATABASE_ECHO,
+            poolclass=NullPool,
+        )
+    else:
+        # PostgreSQL configuration
+        engine = create_engine(
+            settings.DATABASE_URL,
+            echo=settings.DATABASE_ECHO,
+            pool_pre_ping=True,
+            pool_recycle=3600,
+            connect_args={"connect_timeout": 10},
+        )
+    logger.info(f"[OK] Database engine created: {settings.DATABASE_URL[:50]}...")
 except Exception as e:
-    logger.error(f"❌ Failed to create database engine: {str(e)}")
+    logger.error(f"[ERROR] Failed to create database engine: {str(e)}")
     raise
 
 # Create session factory

@@ -1,0 +1,232 @@
+2026-05-16 17:45:48,991 - matplotlib.font_manager - WARNING - Matplotlib is building the font cache; this may take a moment.
+2026-05-16 17:45:50,665 - matplotlib.font_manager - INFO - generated new fontManager
+2026-05-16 17:48:24,852 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:48:24,852 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:48:24,852 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:51:34,801 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:51:34,801 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:51:34,801 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:51:34,806 - app.core.logging - ERROR - Failed to load YOLOv8 model: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL torch.nn.modules.container.Sequential was not an allowed global by default. Please use `torch.serialization.add_safe_globals([torch.nn.modules.container.Sequential])` or the `torch.serialization.safe_globals([torch.nn.modules.container.Sequential])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-05-16 17:52:31,935 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:52:31,938 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:52:31,938 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:52:32,062 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:53:12,100 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:53:12,100 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:53:12,100 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:53:12,134 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:56:08,052 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:56:08,052 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:56:08,052 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:56:08,097 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:56:08,124 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 17:56:08,145 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 17:56:08,145 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 17:56:08,147 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.ProgrammingError) invalid dsn: invalid connection option "command_timeout"
+
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-16 17:56:08,147 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 17:56:08,147 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 17:56:18,423 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 17:56:26,086 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:56:26,086 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:56:26,086 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:56:26,117 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:56:26,150 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 17:56:26,178 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 17:56:26,178 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 17:56:26,178 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.ProgrammingError) invalid dsn: invalid connection option "command_timeout"
+
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-16 17:56:26,178 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 17:56:26,178 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 17:56:53,149 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 17:57:00,788 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:57:00,788 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:57:00,788 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:57:00,830 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:57:00,853 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 17:57:00,867 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 17:57:00,869 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 17:57:00,869 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 17:57:04,930 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 17:57:04,932 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 17:57:04,933 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 17:57:12,390 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:57:12,392 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:57:12,392 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:57:12,436 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:57:12,477 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 17:57:12,494 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 17:57:12,496 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 17:57:12,496 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 17:57:16,565 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 17:57:16,566 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 17:57:16,567 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:07:58,704 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:08:13,630 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:08:13,631 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:08:13,632 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:08:13,752 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:08:13,782 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:08:13,817 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:08:13,819 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:08:13,819 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:08:17,882 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:08:17,883 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:08:17,883 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:08:24,812 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:08:24,812 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:08:24,812 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:08:24,853 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:08:24,884 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:08:24,909 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:08:24,910 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:08:24,911 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:08:29,006 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:08:29,008 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:08:29,010 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:13:15,223 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:13:24,806 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:13:24,808 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:13:24,808 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:13:24,923 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:13:24,953 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:13:24,974 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:13:24,974 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:13:24,974 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:13:29,094 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:13:29,095 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:13:29,095 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:13:45,275 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:13:53,090 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:13:53,091 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:13:53,091 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:13:53,148 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:13:53,172 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:13:53,188 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:13:53,190 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:13:53,190 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:13:57,247 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:13:57,247 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:13:57,247 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:17:36,980 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:17:44,013 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:17:44,013 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:17:44,013 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:17:44,069 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:17:44,097 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:17:44,116 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:17:44,116 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:17:44,116 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:17:48,169 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:17:48,169 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:17:48,169 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:18:14,794 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:18:21,398 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:18:21,398 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:18:21,398 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:18:21,439 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:18:21,466 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:18:21,483 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:18:21,485 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:18:21,485 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:18:25,583 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:18:25,583 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:18:25,584 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:47:03,263 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:47:11,387 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:47:11,387 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:47:11,388 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:47:11,560 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:47:11,601 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:47:11,619 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:47:11,621 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:47:11,621 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:47:15,700 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:47:15,700 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:47:15,701 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:50:06,611 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:50:13,677 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:50:13,677 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:50:13,677 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:50:13,733 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:50:13,760 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:50:13,777 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:50:13,779 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:50:13,779 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:50:17,855 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:50:17,857 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:50:17,857 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:53:44,806 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:54:05,077 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:54:05,080 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:54:05,080 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:54:05,340 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:54:05,622 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:54:05,674 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:54:05,680 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:54:05,681 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:54:09,760 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 18:54:09,761 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:54:09,761 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}

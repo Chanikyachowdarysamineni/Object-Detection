@@ -4,14 +4,14 @@ from sqlalchemy import desc, and_, or_
 from datetime import datetime, timedelta
 from typing import Optional, List
 
-from app.core.database import get_db
-from app.core.logging import logger
-from app.schemas.schemas import (
+from ..core.database import get_db
+from ..core.logging import logger
+from ..schemas.schemas import (
     DetectionLogResponse,
     DetectionStats,
     DetectionLogFilter,
 )
-from app.models.models import Detection, DetectedObject
+from ..models.models import Detection, DetectedObject
 
 router = APIRouter(prefix="/api/logs", tags=["logs"])
 

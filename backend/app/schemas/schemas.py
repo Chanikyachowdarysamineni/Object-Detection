@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional
 from datetime import datetime
 
@@ -6,7 +6,7 @@ from datetime import datetime
 # User Schemas
 class UserCreate(BaseModel):
     username: str = Field(..., min_length=3, max_length=100)
-    email: str = Field(..., regex=r"^[\w\.-]+@[\w\.-]+\.\w+$")
+    email: str = Field(..., pattern=r"^[\w\.-]+@[\w\.-]+\.\w+$")
     password: str = Field(..., min_length=8)
 
 
@@ -23,8 +23,7 @@ class UserResponse(BaseModel):
     is_active: bool
     created_at: datetime
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # Token Schemas
@@ -46,8 +45,7 @@ class DetectedObjectResponse(BaseModel):
     class_id: int
     track_id: Optional[int] = None
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class DetectedObjectCreate(BaseModel):
@@ -77,8 +75,7 @@ class DetectionResponse(BaseModel):
     created_at: datetime
     detected_objects: List[DetectedObjectResponse] = []
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(protected_namespaces=(), from_attributes=True)
 
 
 class DetectionCreate(BaseModel):
@@ -117,8 +114,7 @@ class ModelResponse(BaseModel):
     is_active: bool
     uploaded_at: datetime
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(protected_namespaces=(), from_attributes=True)
 
 
 class ModelCreate(BaseModel):
@@ -140,8 +136,7 @@ class DatasetResponse(BaseModel):
     is_active: bool
     created_at: datetime
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class DatasetCreate(BaseModel):
@@ -171,6 +166,8 @@ class DetectionLogResponse(BaseModel):
     processing_ms: int
     created_at: datetime
     status: str
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class DetectionLogFilter(BaseModel):

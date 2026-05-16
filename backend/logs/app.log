@@ -1,0 +1,223 @@
+2026-05-16 17:48:43,524 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:48:43,524 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:48:43,524 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:51:34,799 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:51:34,799 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:51:34,799 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:51:34,801 - app.core.logging - ERROR - Failed to load YOLOv8 model: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL torch.nn.modules.container.Sequential was not an allowed global by default. Please use `torch.serialization.add_safe_globals([torch.nn.modules.container.Sequential])` or the `torch.serialization.safe_globals([torch.nn.modules.container.Sequential])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-05-16 17:52:02,249 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:52:02,250 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:52:02,250 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:52:02,255 - app.core.logging - ERROR - Failed to load YOLOv8 model: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL torch.nn.modules.container.Sequential was not an allowed global by default. Please use `torch.serialization.add_safe_globals([torch.nn.modules.container.Sequential])` or the `torch.serialization.safe_globals([torch.nn.modules.container.Sequential])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-05-16 17:52:31,982 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:52:31,982 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:52:31,984 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:52:32,062 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:53:13,426 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:53:13,426 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:53:13,426 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:53:13,471 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:56:27,949 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:56:27,949 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:56:27,949 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:56:27,999 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:56:28,029 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 17:56:28,048 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 17:56:28,048 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 17:56:28,048 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.ProgrammingError) invalid dsn: invalid connection option "command_timeout"
+
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-16 17:56:28,048 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 17:56:28,048 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 17:56:53,008 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 17:57:13,549 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 17:57:13,550 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 17:57:13,550 - app.core.logging - INFO - Using device: cpu
+2026-05-16 17:57:13,603 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 17:57:13,655 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 17:57:13,679 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 17:57:13,681 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 17:57:13,681 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 17:57:17,769 - app.core.logging - ERROR - [ERROR] Database initialization failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-16 17:57:17,772 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 17:57:17,774 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:08:51,005 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:08:51,005 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:08:51,005 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:08:51,106 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:08:51,130 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:08:51,145 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:08:51,145 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:08:51,145 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:08:51,256 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:08:51,261 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:08:51,261 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:13:15,165 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:13:24,875 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:13:24,875 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:13:24,875 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:13:24,988 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:13:25,015 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:13:25,034 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:13:25,034 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:13:25,034 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:13:25,039 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:13:25,039 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:13:25,039 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:13:45,054 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:13:52,989 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:13:52,989 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:13:52,989 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:13:53,063 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:13:53,086 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:13:53,106 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:13:53,108 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:13:53,108 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:13:53,110 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:13:53,110 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:13:53,110 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:17:36,863 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:17:44,063 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:17:44,065 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:17:44,065 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:17:44,120 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:17:44,145 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:17:44,162 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:17:44,162 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:17:44,162 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:17:44,164 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:17:44,166 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:17:44,166 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:17:46,104 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:17:52,578 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:17:52,578 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:17:52,578 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:17:52,628 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:17:52,664 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:17:52,683 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:17:52,684 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:17:52,684 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:17:52,686 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:17:52,686 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:17:52,687 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:17:55,702 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:17:55,704 - app.core.logging - INFO - [OK] Database tables created
+2026-05-16 18:17:55,728 - app.core.logging - INFO - [DB] Creating default YOLOv8 model...
+2026-05-16 18:17:55,728 - app.core.logging - INFO - [OK] Default model created
+2026-05-16 18:17:55,742 - app.core.logging - INFO - [DB] Creating default admin user...
+2026-05-16 18:17:55,745 - app.core.logging - INFO - [OK] Default admin user created
+2026-05-16 18:17:55,745 - app.core.logging - INFO - [OK] Database initialization complete
+2026-05-16 18:18:14,727 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:18:21,398 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:18:21,398 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:18:21,398 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:18:21,443 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:18:21,471 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:18:21,490 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:18:21,504 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:18:21,504 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:18:21,508 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:18:21,508 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:18:21,508 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:43:59,617 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:43:59,617 - app.core.logging - INFO - [OK] Database tables created
+2026-05-16 18:43:59,634 - app.core.logging - INFO - [OK] Default model already exists
+2026-05-16 18:43:59,634 - app.core.logging - INFO - [OK] Default admin user already exists
+2026-05-16 18:43:59,634 - app.core.logging - INFO - [OK] Database initialization complete
+2026-05-16 18:45:19,535 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:45:19,535 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:45:19,535 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:45:19,782 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:45:19,850 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:45:19,887 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:47:03,329 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:47:11,364 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:47:11,364 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:47:11,364 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:47:11,416 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:47:11,449 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:47:11,470 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:47:11,545 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:47:11,545 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:47:11,550 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:47:11,550 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:47:11,550 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:50:06,611 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:50:13,665 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:50:13,665 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:50:13,665 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:50:13,714 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:50:13,741 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:50:13,760 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:50:13,762 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:50:13,762 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:50:13,763 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:50:13,763 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:50:13,763 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:53:29,706 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:53:29,708 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:53:29,708 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:53:30,377 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:53:30,445 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:53:30,479 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:53:30,730 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:53:30,731 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:53:30,737 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:53:30,739 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:53:30,740 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:53:30,744 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:53:43,914 - app.core.logging - INFO - [SHUTDOWN] Shutting down application...
+2026-05-16 18:54:05,137 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:54:05,142 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:54:05,144 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:54:05,305 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:54:05,622 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:54:05,677 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:54:05,681 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:54:05,682 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:54:05,691 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:54:05,696 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:54:05,697 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:54:05,945 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:54:05,945 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:54:05,946 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:54:06,581 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:54:06,644 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:54:06,679 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:54:23,651 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:54:23,651 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:54:23,651 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:54:23,812 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:54:23,867 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
+2026-05-16 18:54:23,877 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:54:23,939 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:54:23,939 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:54:23,941 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:54:23,941 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:54:23,941 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}
+2026-05-16 18:57:32,284 - app.core.logging - INFO - Loading YOLOv8 model from yolov8n.pt
+2026-05-16 18:57:32,284 - app.core.logging - WARNING - CUDA not available, falling back to CPU
+2026-05-16 18:57:32,284 - app.core.logging - INFO - Using device: cpu
+2026-05-16 18:57:32,468 - app.core.logging - INFO - YOLOv8 model loaded successfully on device: cpu
+2026-05-16 18:57:32,530 - app.core.logging - INFO - [OK] CORS configured for origins: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'http://localhost:5176', 'http://localhost:3000', 'http://127.0.0.1:5173', 'http://127.0.0.1:5174', 'http://127.0.0.1:5175', 'http://127.0.0.1:5176']
+2026-05-16 18:57:32,548 - app.core.logging - INFO - [OK] All routers registered
+2026-05-16 18:57:32,615 - app.core.logging - INFO - [STARTUP] Starting application...
+2026-05-16 18:57:32,617 - app.core.logging - INFO - [DB] Creating database tables...
+2026-05-16 18:57:32,618 - app.core.logging - INFO - [OK] Database tables initialized
+2026-05-16 18:57:32,620 - app.core.logging - INFO - [MODEL] Loading YOLOv8 model...
+2026-05-16 18:57:32,620 - app.core.logging - INFO - [OK] YOLOv8 model loaded successfully: {'model_name': 'yolov8n.pt', 'num_classes': 80, 'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'], 'device': 'cpu', 'status': 'ready'}

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from app.core.logging import logger
-from app.services.yolo_service import YOLOv8Service
+from ..core.logging import logger
+from ..services.yolo_service import YOLOv8Service
 
 router = APIRouter(prefix="/api/health", tags=["health"])
 
